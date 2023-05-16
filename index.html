@@ -22,7 +22,7 @@
         <p>O primeiro passo é preencher esse formulário de inscrição.</p>
       </header>
 
-      <form>
+      <form id="my-form">
         <fieldset>
           <div class="fieldset-wrapper">
             <legend>Informações do evento</legend>
@@ -31,7 +31,7 @@
               <label for="event-title"
                 >Título do evento<span>(mínimo 8 caracteres)</span>
               </label>
-              <input type="text" id="event-title" />
+              <input type="text" id="event-title" required minlength="8" />
             </div>
 
             <div class="input-wrapper">
@@ -115,7 +115,12 @@
         </fieldset>
       </form>
       <footer>
-        <input class="button" type="submit" value="salvar evento" />
+        <input
+          class="button"
+          type="submit"
+          form="my-form"
+          value="salvar evento"
+        />
       </footer>
     </div>
   </body>
